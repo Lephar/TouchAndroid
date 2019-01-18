@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaunchActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScan"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPort" />
+
+    <TextView
+        android:id="@+id/textViewIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="IP:"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Port:"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintStart_toStartOf="@+id/textViewIP"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIP" />
+
+    <EditText
+        android:id="@+id/editTextIP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:digits="0123456789."
+        android:ems="10"
+        android:inputType="number"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewIP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextPort"
+        app:layout_constraintTop_toTopOf="@+id/textViewIP" />
+
+    <EditText
+        android:id="@+id/editTextPort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="10110"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPort"
+        app:layout_constraintEnd_toStartOf="@+id/buttonConnect"
+        app:layout_constraintStart_toEndOf="@+id/textViewPort"
+        app:layout_constraintTop_toTopOf="@+id/textViewPort" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        style="@android:style/Widget.Material.Button.Borderless.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Connect"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPort"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextPort" />
+
+    <TextView
+        android:id="@+id/textViewScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Scanning Network..."
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/textViewLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="top|center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</android.support.constraint.ConstraintLayout>
