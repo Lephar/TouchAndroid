@@ -15,7 +15,7 @@ public class LaunchActivity extends Activity {
 
     static DataOutputStream stream = null;
     static boolean connected;
-    Thread thread[];
+    Thread[] thread;
     TextView logView;
     String log;
 
